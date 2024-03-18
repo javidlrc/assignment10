@@ -15,9 +15,9 @@ namespace mission10.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Bowlers> Get()
+        public IEnumerable<object> Get()
         {
-            var bowlingData = _bowlingRepository.Bowlers.
+            var bowlingData = _bowlingRepository.GetBowlers();
 
             return bowlingData;
         }

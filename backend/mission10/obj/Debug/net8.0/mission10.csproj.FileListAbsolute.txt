@@ -125,3 +125,4 @@ C:\Users\javierdlrc\source\repos\assignment10\backend\mission10\obj\Debug\net8.0
 C:\Users\javierdlrc\source\repos\assignment10\backend\mission10\obj\Debug\net8.0\mission10.pdb
 C:\Users\javierdlrc\source\repos\assignment10\backend\mission10\obj\Debug\net8.0\mission10.genruntimeconfig.cache
 C:\Users\javierdlrc\source\repos\assignment10\backend\mission10\obj\Debug\net8.0\ref\mission10.dll
+C:\Users\javierdlrc\source\repos\assignment10\backend\mission10\obj\Debug\net8.0\mission10.sourcelink.json

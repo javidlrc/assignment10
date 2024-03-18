@@ -14,7 +14,7 @@ namespace mission10.Data
 
         public IEnumerable<Teams> Teams => throw new NotImplementedException();
 
-        public IEnumerable<Bowlers> GetBowlers()
+        public IEnumerable<object> GetBowlers()
         {
             var bowlersAndTeams = from bowler in _context.Bowlers
                                   join team in _context.Teams
@@ -31,26 +31,11 @@ namespace mission10.Data
                                       BowlerState = bowler.BowlerState,
                                       BowlerZip = bowler.BowlerZip,
                                       BowlerPhoneNumber = bowler.BowlerPhoneNumber,
-                                      Teams = team
+                                      TeamName = team.TeamName
                                   };
 
-            var bowlerWithTeam = bowlersAndTeams
-                .Select(j => new Bowlers
-                {
-                    BowlerID = j.BowlerID,
-                    BowlerFirstName = j.BowlerFirstName,
-                    BowlerMiddleInit = j.BowlerMiddleInit,
-                    BowlerLastName = j.BowlerLastName,
-                    BowlerAddress = j.BowlerAddress,
-                    BowlerCity = j.BowlerCity,
-                    BowlerState = j.BowlerState,
-                    BowlerZip = j.BowlerZip,
-                    BowlerPhoneNumber = j.BowlerPhoneNumber,
-                    Teams = j.Teams
-                })
-                .ToList();
 
-            return bowlerWithTeam;
+            return bowlersAndTeams.ToList();
         }
 
     }

@@ -4,5 +4,6 @@
     {
         IEnumerable<Bowlers> Bowlers { get; }
         IEnumerable<Teams> Teams { get; }
+        IEnumerable<object> GetBowlers();
     }
 }
